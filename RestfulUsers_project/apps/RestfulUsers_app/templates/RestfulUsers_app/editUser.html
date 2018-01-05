@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users New</title>
+    {% load static %}
+    <link rel="stylesheet" type ="text/css" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        {% for message in messages %}
+            <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                {{ message }}</p>
+        {% endfor %}
+
+        <h1>Add a new user</h1>
+        <form action="/users/{{ id }}/update" method="post">
+            {%csrf_token%}
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" value="{{ first_name }}">
+            
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" value="{{ last_name }}">
+            
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" value="{{ email }}">
+
+            <button type="submit">Update</button>
+        </form>
+        <a href="/users">Go Back</a>
+    </div>
+</body>
+</html>

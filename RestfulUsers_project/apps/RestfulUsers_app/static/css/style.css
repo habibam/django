@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* outline: 1px dotted darkred; */
+}
+
+#wrapper{
+    width: 450px;
+    height: 4500px;
+    margin: 0px auto;
+}

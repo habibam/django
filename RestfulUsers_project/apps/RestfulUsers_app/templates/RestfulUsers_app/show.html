@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users New</title>
+    {% load static %}
+    <link rel="stylesheet" type ="text/css" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>User {{ id }} </h1>
+        <p>Full Name: {{ name }}</p>
+        <p>Email: {{ email }}</p>
+        <p>Created at: {{ created_at }}</p>
+
+        <p>
+            <a href="/users/{{ id }}/edit">Edit</a> | <a href="/users/{{ id }}/destroy">Delete</a>
+        </p>
+    </div>
+</body>
+</html>

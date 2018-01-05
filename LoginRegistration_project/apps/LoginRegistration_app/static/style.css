@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* outline: 1px dotted darkred; */
+    vertical-align: top;
+}
+
+#wrapper{
+    width: 300px;
+    /* height: 970px; */
+    margin: 0px auto;
+}
+label{
+    width: 123px;
+    display: inline-block;
+    margin: 5px 0px;
+}
+
+input{
+    width: 169px;
+    align-self: right;
+}
+
+h1{
+    margin:20px 0px 10px 0px;
+}
+
+button{
+    padding: 5px;
+}

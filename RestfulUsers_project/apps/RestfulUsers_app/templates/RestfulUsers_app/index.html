@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Index</title>
+    {% load static %}
+    <link rel="stylesheet" type ="text/css" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <table class='table-bordered'>
+            <thead>
+                <th>id</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </thead>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.first_name }} {{ user.last_name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.created_at }}</td>
+                    <td>
+                        <a href="/users/{{ user.id}}/">Show</a>
+                        <a href="/users/{{ user.id }}/edit">Edit</a>
+                        <a href="/users/{{ user.id }}/destroy">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <a href="/users/new">Add a new user</a>
+    </div>
+</body>
+</html>
